@@ -1,9 +1,9 @@
 #!/usr/bin/env runhaskell
 
 import Data.List.Split (splitOn)
-import Data.Map.Strict ((!))
+import Data.Map.Strict (Map, (!))
 
-import qualified Data.Map.Strict as Map
+import qualified Data.Map.Strict as M
 
 splitContents :: String -> [String]
 splitContents "no other bags." = []
@@ -16,11 +16,11 @@ getBagAndContents rule =
   let [bag,contents] = splitOn " bags contain " rule
   in (bag, splitContents contents)
 
-buildChildBags :: [String] -> Map.Map String [String]
-buildChildBags = Map.fromList . map getBagAndContents
+buildChildBags :: [String] -> Map String [String]
+buildChildBags = M.fromList . map getBagAndContents
 
-countBagsContainingShinyGold :: Map.Map String [String] -> Int
-countBagsContainingShinyGold bagRules = Map.foldrWithKey (\colour _ acc -> go colour + acc) 0 bagRules
+countBagsContainingShinyGold :: Map String [String] -> Int
+countBagsContainingShinyGold bagRules = M.foldrWithKey (\colour _ acc -> go colour + acc) 0 bagRules
   where
     go colour =
       let canContain = bagRules ! colour

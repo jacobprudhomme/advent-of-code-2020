@@ -1,9 +1,9 @@
 #!/usr/bin/env runhaskell
 
 import Data.List.Split (splitOn)
-import Data.Map.Strict ((!))
+import Data.Map.Strict (Map, (!))
 
-import qualified Data.Map.Strict as Map
+import qualified Data.Map.Strict as M
 
 parseCountAndReconstructColour :: [String] -> (String, Int)
 parseCountAndReconstructColour (count:rest) = (unwords rest, read count)
@@ -19,10 +19,10 @@ getBagAndContents rule =
   let [bag,contents] = splitOn " bags contain " rule
   in (bag, splitContents contents)
 
-buildChildBags :: [String] -> Map.Map String [(String, Int)]
-buildChildBags = Map.fromList . map getBagAndContents
+buildChildBags :: [String] -> Map String [(String, Int)]
+buildChildBags = M.fromList . map getBagAndContents
 
-countBagsContainedByShinyGold :: Map.Map String [(String, Int)] -> Int
+countBagsContainedByShinyGold :: Map String [(String, Int)] -> Int
 countBagsContainedByShinyGold bagRules = go "shiny gold" - 1  -- Do not count the shiny gold bag itself
   where
     go colour =

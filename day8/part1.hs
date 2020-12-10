@@ -1,14 +1,15 @@
 #!/usr/bin/env runhaskell
 
-import Control.Monad.Trans.State.Strict (State(..), evalState, gets, modify')
+import Control.Monad.Trans.State.Strict (State, evalState, gets, modify')
 import Data.Bifunctor (first, second)
+import Data.Set (Set)
 
-import qualified Data.Set as Set
+import qualified Data.Set as S
 
 type Accumulator = Int
 type Instruction = (String,Int)
 type InstructionPointer = Int
-type SeenInstructions = Set.Set Int
+type SeenInstructions = Set Int
 type Program = ([Instruction], SeenInstructions, InstructionPointer, Accumulator)
 type ProgramState = State Program
 
@@ -33,12 +34,12 @@ updateAccumulator :: Int -> ProgramState ()
 updateAccumulator amount = modify' (second (+amount))
 
 addToSeenInstructions :: InstructionPointer -> ProgramState ()
-addToSeenInstructions instrLine = modify' (\(is,sis,ip,acc) -> (is, Set.insert instrLine sis, ip, acc))
+addToSeenInstructions instrLine = modify' (\(is,sis,ip,acc) -> (is, S.insert instrLine sis, ip, acc))
 
 hasInstructionBeenSeen :: InstructionPointer -> ProgramState Bool
 hasInstructionBeenSeen instrLine = do
   seenInstrs <- gets (\(_,seenInstrs,_,_) -> seenInstrs)
-  return $ Set.member instrLine seenInstrs
+  return $ S.member instrLine seenInstrs
 
 run :: ProgramState Accumulator
 run = do
@@ -56,7 +57,7 @@ runProgram :: Program -> Accumulator
 runProgram = evalState run
 
 initializeState :: [Instruction] -> Program
-initializeState instrs = (instrs, Set.empty, 1, 0)
+initializeState instrs = (instrs, S.empty, 1, 0)
 
 parseInstruction :: String -> Instruction
 parseInstruction = (\[cmd,arg] -> (cmd, parseInt arg)) . words

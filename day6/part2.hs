@@ -1,13 +1,13 @@
 #!/usr/bin/env runhaskell
 
 import Data.List.Split (splitWhen)
-import Data.Set (intersection)
+import Data.Set (Set)
 
-import qualified Data.Set as Set
+import qualified Data.Set as S
 
-collectYesesForGroup :: [String] -> Set.Set Char
+collectYesesForGroup :: [String] -> Set Char
 collectYesesForGroup (personsAnswers:otherPeoplesAnswers) =
-  foldr (intersection . Set.fromList) (Set.fromList personsAnswers) otherPeoplesAnswers
+  foldr (S.intersection . S.fromList) (S.fromList personsAnswers) otherPeoplesAnswers
 
 main :: IO ()
-main = interact $ show . sum . map (Set.size . collectYesesForGroup) . splitWhen null . lines
+main = interact $ show . sum . map (S.size . collectYesesForGroup) . splitWhen null . lines
