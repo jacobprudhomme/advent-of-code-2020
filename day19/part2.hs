@@ -3,7 +3,6 @@
 import Data.Bifunctor (bimap)
 import Data.Char (isDigit)
 import Data.IntMap.Strict (IntMap, (!))
-import Data.List.Split (splitWhen)
 import Text.ParserCombinators.ReadP
 
 import qualified Data.IntMap.Strict as M
