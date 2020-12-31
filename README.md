@@ -9,6 +9,7 @@ For all of these problems, I used GHC `8.10.2` and Cabal `3.2.0.0` installed glo
 Some solutions require additional libraries to `base`. These are (along with their versions as of the time of writing):
 
 * `arithmoi 0.11.0.1`
+* `array 0.5.4.0`
 * `containers 0.6.2.1`
 * `regex-tdfa 1.3.1.0`
 * `split 0.2.3.4`
