@@ -163,6 +163,7 @@ relativeSeaMonsterPositions =
 getRelativeSeaMonsterPositions :: Position -> [Position]
 getRelativeSeaMonsterPositions (x,y) = map (\(x',y') -> (x+x', y+y')) relativeSeaMonsterPositions
 
+-- Rotation 90deg to the right
 rotateArray :: UArray Position Char -> UArray Position Char
 rotateArray xxs =
   let bnds@(_,(maxX,maxY)) = bounds xxs
@@ -241,9 +242,6 @@ tileToArray tile =
   let maxX = length (head tile) - 1
       maxY = length tile - 1
   in array ((0,0), (maxX,maxY)) $ concat $ ifoldl' (\tileAcc y row -> ifoldl' (\rowAcc x pixel -> ((x,y), pixel) : rowAcc) [] row : tileAcc) [] tile
-
-isSeaMonsterAt' :: UArray Position Char -> Bool
-isSeaMonsterAt' tile = all (\pos -> tile ! pos == '#') $ getRelativeSeaMonsterPositions (2,3)
 
 main :: IO ()
 main = interact $ show . countRoughWaterPixels . tileToArray . mergeTiles . addNeighbours . map splitTileAndId . splitWhen null . lines
