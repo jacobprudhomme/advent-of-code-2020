@@ -13,6 +13,7 @@ Some solutions require additional libraries to `base`. These are (along with the
 * `containers 0.6.2.1`
 * `regex-tdfa 1.3.1.0`
 * `split 0.2.3.4`
+* `transformers 0.5.6.2`
 
 ## How to Use
 
