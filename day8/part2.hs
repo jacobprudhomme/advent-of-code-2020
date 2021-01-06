@@ -1,4 +1,7 @@
-#!/usr/bin/env runhaskell
+#!/usr/bin/env cabal
+{- cabal:
+build-depends: base, containers, transformers
+-}
 
 import Control.Monad.Trans.State.Strict (State, evalState, gets, modify')
 import Data.Bifunctor (first, second)

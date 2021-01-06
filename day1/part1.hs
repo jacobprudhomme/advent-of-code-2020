@@ -1,4 +1,7 @@
-#!/usr/bin/env runhaskell
+#!/usr/bin/env cabal
+{- cabal:
+build-depends: base
+-}
 
 selectTermsThatSumTo2020 :: [Int] -> (Int,Int)
 selectTermsThatSumTo2020 xs = head termsThatSumTo2020

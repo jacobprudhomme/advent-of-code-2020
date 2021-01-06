@@ -1,4 +1,7 @@
-#!/usr/bin/env runhaskell
+#!/usr/bin/env cabal
+{- cabal:
+build-depends: base, containers, split
+-}
 
 import Data.Bifunctor (second)
 import Data.Char (isAlpha, isDigit, isSpace)

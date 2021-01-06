@@ -1,4 +1,7 @@
-#!/usr/bin/env runhaskell
+#!/usr/bin/env cabal
+{- cabal:
+build-depends: base, arithmoi, split
+-}
 
 import Data.List.Split (splitOn)
 import Data.Maybe (fromJust)

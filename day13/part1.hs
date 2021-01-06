@@ -1,4 +1,7 @@
-#!/usr/bin/env runhaskell
+#!/usr/bin/env cabal
+{- cabal:
+build-depends: base, split
+-}
 
 import Data.List (minimumBy)
 import Data.List.Split (splitOn)

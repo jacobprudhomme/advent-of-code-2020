@@ -1,4 +1,7 @@
-#!/usr/bin/env runhaskell
+#!/usr/bin/env cabal
+{- cabal:
+build-depends: base, arithmoi
+-}
 
 import Control.Arrow ((&&&))
 import Math.NumberTheory.Powers.Modular (powModInt)

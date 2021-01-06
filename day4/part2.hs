@@ -1,4 +1,7 @@
-#!/usr/bin/env runhaskell
+#!/usr/bin/env cabal
+{- cabal:
+build-depends: base, containers, regex-tdfa, split
+-}
 
 import Data.List.Split (splitOn, splitWhen)
 import Data.Map.Strict (Map, (!))

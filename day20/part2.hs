@@ -1,4 +1,7 @@
-#!/usr/bin/env runhaskell
+#!/usr/bin/env cabal
+{- cabal:
+build-depends: base, array, containers, ilist, split, transformers
+-}
 
 {-# LANGUAGE TupleSections #-}
 

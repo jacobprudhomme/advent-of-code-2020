@@ -1,4 +1,7 @@
-#!/usr/bin/env runhaskell
+#!/usr/bin/env cabal
+{- cabal:
+build-depends: base, containers
+-}
 
 import Data.Set (Set)
 import Text.ParserCombinators.ReadP
