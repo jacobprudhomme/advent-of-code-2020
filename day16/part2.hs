@@ -8,7 +8,6 @@ import Data.Char (isAlpha, isDigit, isSpace)
 import Data.List (foldl', isPrefixOf, sortOn)
 import Data.List.Split (splitOn, splitWhen)
 import Data.Set (Set, (\\))
-import Debug.Trace (traceShowId)
 import Text.ParserCombinators.ReadP (ReadP, char, munch1, readP_to_S, string)
 
 import qualified Data.Set as S
