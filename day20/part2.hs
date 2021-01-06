@@ -7,7 +7,7 @@ build-depends: base, array, containers, ilist, split, transformers
 
 import Control.Arrow ((&&&))
 import Control.Monad (guard)
-import Control.Monad.Trans.State (State, evalState, get, modify)
+import Control.Monad.Trans.State.Strict (State, evalState, get, modify)
 import Data.Array.Unboxed
 import Data.Bifunctor (bimap, first, second)
 import Data.Char (isDigit)
