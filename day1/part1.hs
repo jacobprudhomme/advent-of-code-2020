@@ -1,6 +1,6 @@
 #!/usr/bin/env -S cabal run -O2 -v0
 {- cabal:
-build-depends: base
+build-depends: base ^>= 4.14.1.0
 -}
 
 selectTermsThatSumTo2020 :: [Int] -> (Int,Int)

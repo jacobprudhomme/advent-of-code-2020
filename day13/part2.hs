@@ -1,6 +1,8 @@
 #!/usr/bin/env -S cabal run -O2 -v0
 {- cabal:
-build-depends: base, arithmoi, split
+build-depends: base ^>= 4.14.1.0
+             , arithmoi ^>= 0.11.0.1
+             , split ^>= 0.2.3.4
 -}
 
 import Data.List.Split (splitOn)

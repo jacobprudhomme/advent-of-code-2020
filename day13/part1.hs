@@ -1,6 +1,7 @@
 #!/usr/bin/env -S cabal run -O2 -v0
 {- cabal:
-build-depends: base, split
+build-depends: base ^>= 4.14.1.0
+             , split ^>= 0.2.3.4
 -}
 
 import Data.List (minimumBy)

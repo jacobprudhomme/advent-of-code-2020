@@ -1,6 +1,8 @@
 #!/usr/bin/env -S cabal run -O2 -v0
 {- cabal:
-build-depends: base, containers, transformers
+build-depends: base ^>= 4.14.1.0
+             , containers ^>= 0.6.2.1
+             , transformers ^>= 0.5.6.2
 -}
 
 import Control.Monad.Trans.State.Strict (State, evalState, gets, modify')

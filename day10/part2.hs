@@ -1,6 +1,7 @@
 #!/usr/bin/env -S cabal run -O2 -v0
 {- cabal:
-build-depends: base, containers
+build-depends: base ^>= 4.14.1.0
+             , containers ^>= 0.6.2.1
 -}
 
 import Data.IntMap.Strict (IntMap, (!))

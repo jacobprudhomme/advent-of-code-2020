@@ -1,6 +1,11 @@
 #!/usr/bin/env -S cabal run -O2 -v0
 {- cabal:
-build-depends: base, array, containers, ilist, split, transformers
+build-depends: base ^>= 4.14.1.0
+             , array ^>= 0.5.4.0
+             , containers ^>= 0.6.2.1
+             , ilist ^>= 0.4.0.1
+             , split ^>= 0.2.3.4
+             , transformers ^>= 0.5.6.2
 -}
 
 {-# LANGUAGE TupleSections #-}

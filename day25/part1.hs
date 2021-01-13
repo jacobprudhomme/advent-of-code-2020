@@ -1,6 +1,7 @@
 #!/usr/bin/env -S cabal run -O2 -v0
 {- cabal:
-build-depends: base, arithmoi
+build-depends: base ^>= 4.14.1.0
+             , arithmoi ^>= 0.11.0.1
 -}
 
 import Control.Arrow ((&&&))
