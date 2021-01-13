@@ -1,4 +1,4 @@
-#!/usr/bin/env cabal
+#!/usr/bin/env -S cabal run -O2 -v0
 {- cabal:
 build-depends: base, containers, regex-tdfa, split
 -}
