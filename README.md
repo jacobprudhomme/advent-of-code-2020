@@ -8,4 +8,4 @@ For all of these problems, I used GHC `8.10.2` and Cabal `3.2.0.0` installed glo
 
 ## How to Use
 
-All solutions are meant to be runnable as scripts, expecting input on `stdin`. Call them like so: `./partX.hs < input > output` to obtain the output in a file.
+All solutions expect input on `stdin`. Call them like so: `cabal exec dayX-partY < inputs/dayX > output` to obtain the output in a file.
