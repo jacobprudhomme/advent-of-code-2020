@@ -1,0 +1,367 @@
+cabal-version:      2.4
+name:               advent-of-code2020
+version:            1.0.0.0
+synopsis:           Solutions for the Advent of Code 2020, in Haskell
+
+-- A longer description of the package.
+-- description:
+homepage:           https://github.com/jacobprudhomme/advent-of-code-2020
+
+-- A URL where users can report bugs.
+-- bug-reports:
+license:            NONE
+author:             Jacob Prud'homme
+maintainer:         jacobprudhomme@users.noreply.github.com
+
+-- A copyright notice.
+-- copyright:
+-- category:
+extra-source-files:
+    README.md
+
+executable day1-part1
+    main-is:          part1.hs
+    build-depends:    base ^>=4.14.3.0
+    hs-source-dirs:   day1
+    default-language: Haskell2010
+
+executable day1-part2
+    main-is:          part2.hs
+    build-depends:    base ^>=4.14.3.0
+    hs-source-dirs:   day1
+    default-language: Haskell2010
+
+executable day2-part1
+    main-is:          part1.hs
+    build-depends:    base ^>=4.14.3.0
+    hs-source-dirs:   day2
+    default-language: Haskell2010
+
+executable day2-part2
+    main-is:          part2.hs
+    build-depends:    base ^>=4.14.3.0
+    hs-source-dirs:   day2
+    default-language: Haskell2010
+
+executable day3-part1
+    main-is:          part1.hs
+    build-depends:    base ^>=4.14.3.0
+    hs-source-dirs:   day3
+    default-language: Haskell2010
+
+executable day3-part2
+    main-is:          part2.hs
+    build-depends:    base ^>=4.14.3.0
+    hs-source-dirs:   day3
+    default-language: Haskell2010
+
+executable day4-part1
+    main-is:          part1.hs
+    build-depends:    base ^>=4.14.3.0
+                    , split ^>= 0.2.3.4
+    hs-source-dirs:   day4
+    default-language: Haskell2010
+
+executable day4-part2
+    main-is:          part2.hs
+    build-depends:    base ^>=4.14.3.0
+                    , containers ^>= 0.6.5.1
+                    , regex-tdfa ^>= 1.3.1.1
+                    , split ^>= 0.2.3.4
+    hs-source-dirs:   day4
+    default-language: Haskell2010
+
+executable day5-part1
+    main-is:          part1.hs
+    build-depends:    base ^>=4.14.3.0
+    hs-source-dirs:   day5
+    default-language: Haskell2010
+
+executable day5-part2
+    main-is:          part2.hs
+    build-depends:    base ^>=4.14.3.0
+    hs-source-dirs:   day5
+    default-language: Haskell2010
+
+executable day6-part1
+    main-is:          part1.hs
+    build-depends:    base ^>=4.14.3.0
+                    , containers ^>= 0.6.5.1
+                    , split ^>= 0.2.3.4
+    hs-source-dirs:   day6
+    default-language: Haskell2010
+
+executable day6-part2
+    main-is:          part2.hs
+    build-depends:    base ^>=4.14.3.0
+                    , containers ^>= 0.6.5.1
+                    , split ^>= 0.2.3.4
+    hs-source-dirs:   day6
+    default-language: Haskell2010
+
+executable day7-part1
+    main-is:          part1.hs
+    build-depends:    base ^>=4.14.3.0
+                    , containers ^>= 0.6.5.1
+                    , split ^>= 0.2.3.4
+    hs-source-dirs:   day7
+    default-language: Haskell2010
+
+executable day7-part2
+    main-is:          part2.hs
+    build-depends:    base ^>=4.14.3.0
+                    , containers ^>= 0.6.5.1
+                    , split ^>= 0.2.3.4
+    hs-source-dirs:   day7
+    default-language: Haskell2010
+
+executable day8-part1
+    main-is:          part1.hs
+    build-depends:    base ^>=4.14.3.0
+                    , containers ^>= 0.6.5.1
+                    , transformers ^>= 0.5.6.2
+    hs-source-dirs:   day8
+    default-language: Haskell2010
+
+executable day8-part2
+    main-is:          part2.hs
+    build-depends:    base ^>=4.14.3.0
+                    , containers ^>= 0.6.5.1
+                    , transformers ^>= 0.5.6.2
+    hs-source-dirs:   day8
+    default-language: Haskell2010
+
+executable day9-part1
+    main-is:          part1.hs
+    build-depends:    base ^>=4.14.3.0
+    hs-source-dirs:   day9
+    default-language: Haskell2010
+
+executable day9-part2
+    main-is:          part2.hs
+    build-depends:    base ^>=4.14.3.0
+    hs-source-dirs:   day9
+    default-language: Haskell2010
+
+executable day10-part1
+    main-is:          part1.hs
+    build-depends:    base ^>=4.14.3.0
+    hs-source-dirs:   day10
+    default-language: Haskell2010
+
+executable day10-part2
+    main-is:          part2.hs
+    build-depends:    base ^>=4.14.3.0
+                    , containers ^>= 0.6.5.1
+    hs-source-dirs:   day10
+    default-language: Haskell2010
+
+executable day11-part1
+    main-is:          part1.hs
+    build-depends:    base ^>=4.14.3.0
+                    , containers ^>= 0.6.5.1
+    hs-source-dirs:   day11
+    default-language: Haskell2010
+
+executable day11-part2
+    main-is:          part2.hs
+    build-depends:    base ^>=4.14.3.0
+                    , containers ^>= 0.6.5.1
+    hs-source-dirs:   day11
+    default-language: Haskell2010
+
+executable day12-part1
+    main-is:          part1.hs
+    build-depends:    base ^>=4.14.3.0
+    hs-source-dirs:   day12
+    default-language: Haskell2010
+
+executable day12-part2
+    main-is:          part2.hs
+    build-depends:    base ^>=4.14.3.0
+    hs-source-dirs:   day12
+    default-language: Haskell2010
+
+executable day13-part1
+    main-is:          part1.hs
+    build-depends:    base ^>=4.14.3.0
+                    , split ^>= 0.2.3.4
+    hs-source-dirs:   day13
+    default-language: Haskell2010
+
+executable day13-part2
+    main-is:          part2.hs
+    build-depends:    base ^>=4.14.3.0
+                    , arithmoi ^>= 0.11.0.1
+                    , split ^>= 0.2.3.4
+    hs-source-dirs:   day13
+    default-language: Haskell2010
+
+executable day14-part1
+    main-is:          part1.hs
+    build-depends:    base ^>=4.14.3.0
+                    , containers ^>= 0.6.5.1
+                    , split ^>= 0.2.3.4
+    hs-source-dirs:   day14
+    default-language: Haskell2010
+
+executable day14-part2
+    main-is:          part2.hs
+    build-depends:    base ^>=4.14.3.0
+                    , containers ^>= 0.6.5.1
+                    , split ^>= 0.2.3.4
+    hs-source-dirs:   day14
+    default-language: Haskell2010
+
+executable day15-part1
+    main-is:          part1.hs
+    build-depends:    base ^>=4.14.3.0
+                    , containers ^>= 0.6.5.1
+                    , split ^>= 0.2.3.4
+    hs-source-dirs:   day15
+    default-language: Haskell2010
+
+executable day15-part2
+    main-is:          part2.hs
+    build-depends:    base ^>=4.14.3.0
+                    , containers ^>= 0.6.5.1
+                    , split ^>= 0.2.3.4
+    hs-source-dirs:   day15
+    default-language: Haskell2010
+
+executable day16-part1
+    main-is:          part1.hs
+    build-depends:    base ^>=4.14.3.0
+                    , split ^>= 0.2.3.4
+    hs-source-dirs:   day16
+    default-language: Haskell2010
+
+executable day16-part2
+    main-is:          part2.hs
+    build-depends:    base ^>=4.14.3.0
+                    , containers ^>= 0.6.5.1
+                    , split ^>= 0.2.3.4
+    hs-source-dirs:   day16
+    default-language: Haskell2010
+
+executable day17-part1
+    main-is:          part1.hs
+    build-depends:    base ^>=4.14.3.0
+                    , containers ^>= 0.6.5.1
+    hs-source-dirs:   day17
+    default-language: Haskell2010
+
+executable day17-part2
+    main-is:          part2.hs
+    build-depends:    base ^>=4.14.3.0
+                    , containers ^>= 0.6.5.1
+    hs-source-dirs:   day17
+    default-language: Haskell2010
+
+executable day18-part1
+    main-is:          part1.hs
+    build-depends:    base ^>=4.14.3.0
+    hs-source-dirs:   day18
+    default-language: Haskell2010
+
+executable day18-part2
+    main-is:          part2.hs
+    build-depends:    base ^>=4.14.3.0
+    hs-source-dirs:   day18
+    default-language: Haskell2010
+
+executable day19-part1
+    main-is:          part1.hs
+    build-depends:    base ^>=4.14.3.0
+                    , containers ^>= 0.6.5.1
+    hs-source-dirs:   day19
+    default-language: Haskell2010
+
+executable day19-part2
+    main-is:          part2.hs
+    build-depends:    base ^>=4.14.3.0
+                    , containers ^>= 0.6.5.1
+    hs-source-dirs:   day19
+    default-language: Haskell2010
+
+executable day20-part1
+    main-is:          part1.hs
+    build-depends:    base ^>=4.14.3.0
+                    , split ^>= 0.2.3.4
+    hs-source-dirs:   day20
+    default-language: Haskell2010
+
+executable day20-part2
+    main-is:          part2.hs
+    build-depends:    base ^>=4.14.3.0
+                    , array ^>= 0.5.4.0
+                    , containers ^>= 0.6.5.1
+                    , ilist ^>= 0.4.0.1
+                    , split ^>= 0.2.3.4
+                    , transformers ^>= 0.5.6.2
+    hs-source-dirs:   day20
+    default-language: Haskell2010
+
+executable day21-part1
+    main-is:          part1.hs
+    build-depends:    base ^>=4.14.3.0
+                    , containers ^>= 0.6.5.1
+                    , split ^>= 0.2.3.4
+    hs-source-dirs:   day21
+    default-language: Haskell2010
+
+executable day21-part2
+    main-is:          part2.hs
+    build-depends:    base ^>=4.14.3.0
+                    , containers ^>= 0.6.5.1
+                    , split ^>= 0.2.3.4
+    hs-source-dirs:   day21
+    default-language: Haskell2010
+
+executable day22-part1
+    main-is:          part1.hs
+    build-depends:    base ^>=4.14.3.0
+                    , split ^>= 0.2.3.4
+    hs-source-dirs:   day22
+    default-language: Haskell2010
+
+executable day22-part2
+    main-is:          part2.hs
+    build-depends:    base ^>=4.14.3.0
+                    , containers ^>= 0.6.5.1
+                    , split ^>= 0.2.3.4
+    hs-source-dirs:   day22
+    default-language: Haskell2010
+
+executable day23-part1
+    main-is:          part1.hs
+    build-depends:    base ^>=4.14.3.0
+    hs-source-dirs:   day23
+    default-language: Haskell2010
+
+executable day23-part2
+    main-is:          part2.hs
+    build-depends:    base ^>=4.14.3.0
+                    , containers ^>= 0.6.5.1
+    hs-source-dirs:   day23
+    default-language: Haskell2010
+
+executable day24-part1
+    main-is:          part1.hs
+    build-depends:    base ^>=4.14.3.0
+    hs-source-dirs:   day24
+    default-language: Haskell2010
+
+executable day24-part2
+    main-is:          part2.hs
+    build-depends:    base ^>=4.14.3.0
+                    , containers ^>= 0.6.5.1
+    hs-source-dirs:   day24
+    default-language: Haskell2010
+
+executable day25-part1
+    main-is:          part1.hs
+    build-depends:    base ^>=4.14.3.0
+                    , arithmoi ^>= 0.11.0.1
+    hs-source-dirs:   day25
+    default-language: Haskell2010

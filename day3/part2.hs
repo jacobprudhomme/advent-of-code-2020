@@ -1,8 +1,3 @@
-#!/usr/bin/env -S cabal run -O2 -v0
-{- cabal:
-build-depends: base ^>= 4.14.1.0
--}
-
 shiftLinesBy :: (Int, Int) -> [String] -> [Char]
 shiftLinesBy _     [] = []
 shiftLinesBy (m,n) xs = head (head xs) : shiftLinesBy (m,n) (map (drop m) (drop n xs))

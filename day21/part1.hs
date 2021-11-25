@@ -1,10 +1,3 @@
-#!/usr/bin/env -S cabal run -O2 -v0
-{- cabal:
-build-depends: base ^>= 4.14.1.0
-             , containers ^>= 0.6.2.1
-             , split ^>= 0.2.3.4
--}
-
 import Control.Arrow ((&&&))
 import Data.List.Split (splitOn)
 import Data.Map.Strict (Map)
